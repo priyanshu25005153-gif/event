@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stellar Events - Event Management Company</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: #f5f7fa; color: #2b2d42;}
+    header { background: #ee6c4d; color: #fff; padding: 2em 0; text-align: center; }
+    nav { background: #293241; text-align: center;}
+    nav a {
+      color: #fff; padding: 1em 2em; display: inline-block; text-decoration: none; font-weight: bold;
+    }
+    nav a:hover { background: #3d5a80; }
+    .container { max-width: 950px; margin: 2em auto; background: #fff; padding: 2em;
+      border-radius: 11px; box-shadow: 0 0 24px #b0bec5; }
+    section { margin-bottom: 2.6em;}
+    h2 { color: #ee6c4d; margin-bottom: 0.6em;}
+    .event-list { display: flex; flex-wrap: wrap; gap: 2em;}
+    .event {
+      background: #fddbb2; padding: 1.2em 1.5em; border-radius: 10px; width: 250px;
+      box-shadow: 0 1px 6px #ccc; margin-bottom: 1em;
+    }
+    .booking-form label { display:block; margin-bottom: 0.3em;}
+    .booking-form input, .booking-form select {
+      width: 98%; padding: 0.5em; border-radius: 4px; border: 1px solid #b0bec5; margin-bottom: 1em;
+    }
+    .booking-form button {
+      background: #ee6c4d; color: #fff; border: none; padding: 0.7em 2em; border-radius: 5px;
+      font-size: 1em; cursor: pointer; font-weight: bold;
+    }
+    .booking-form button:hover { background: #293241; }
+    .testimonials {
+      margin-top: 1.6em;
+      display: flex; flex-wrap: wrap; gap: 1.3em;
+    }
+    .testimonial {
+      background: #e0fbfc; padding: 1.3em; border-radius: 8px; box-shadow: 0 1px 7px #b2bec3; width: 270px;
+    }
+    .client { color: #3d5a80; font-weight: bold; margin-top: 1em;}
+    .stars { color: #f9a825; }
+    footer { background: #ee6c4d; color: #fff; text-align: center; padding: 1.2em 0; margin-top: 2.5em;}
+    @media (max-width: 700px) {
+      .container { padding: 1em;}
+      .event-list, .testimonials { flex-direction: column; gap: 1em;}
+      .event, .testimonial { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Stellar Events</h1>
+    <p>Making Every Event Unforgettable</p>
+  </header>
+  <nav>
+    <a href="#events">Events</a>
+    <a href="#booking">Booking</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="container">
+    <!-- Event Listings -->
+    <section id="events">
+      <h2>Upcoming Events</h2>
+      <div class="event-list">
+        <div class="event">
+          <strong>Grand Wedding Gala</strong>
+          <p>Date: December 18, 2025<br>
+             Venue: Royal Palace Hall</p>
+          <p>A luxurious celebration for the season’s grandest weddings.</p>
+        </div>
+        <div class="event">
+          <strong>Corporate Leadership Summit</strong>
+          <p>Date: January 21, 2026<br>
+             Venue: Metro Convention Center</p>
+          <p>Bringing together leaders from the tech, finance, and marketing worlds.</p>
+        </div>
+        <div class="event">
+          <strong>Charity Fashion Show</strong>
+          <p>Date: February 24, 2026<br>
+             Venue: Starline Arena</p>
+          <p>Where fashion meets purpose – fundraising for children’s causes.</p>
+        </div>
+        <div class="event">
+          <strong>Food & Culture Fest</strong>
+          <p>Date: March 5, 2026<br>
+             Venue: Riverside Park</p>
+          <p>A celebration of global food, dance, and art in one vibrant festival.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking Information -->
+    <section id="booking">
+      <h2>Book Your Event</h2>
+      <form class="booking-form" onsubmit="alert('Thank you! Our team will contact you soon.'); return false;">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <label for="event-type">Event Type:</label>
+        <select id="event-type" required>
+          <option value="">--Select--</option>
+          <option>Wedding</option>
+          <option>Corporate</option>
+          <option>Birthday</option>
+          <option>Festival</option>
+          <option>Other</option>
+        </select>
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" required>
+        <button type="submit">Book Now</button>
+      </form>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials">
+      <h2>What Our Clients Say</h2>
+      <div class="testimonials">
+        <div class="testimonial">
+          <p>"Stellar Events made our wedding day magical and stress-free. The attention to detail and the dedication of their team is unmatched!"</p>
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="client">- Ankit & Priya</div>
+        </div>
+        <div class="testimonial">
+          <p>"From concept to execution, our corporate summit was handled with professionalism. The best event partners we've ever worked with
